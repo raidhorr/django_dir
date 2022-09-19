@@ -19,6 +19,7 @@ from django.contrib.flatpages import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('pages/', include('django.contrib.flatpages.urls')),
-    re_path(r'^$', views.flatpage, {'url': 'page1/'})
+    path('pages/', include('django.contrib.flatpages.urls')),
+    # re_path(r'^$', views.flatpage, {'url': 'page1/'}),
+    path('products/', include('simpleapp.urls')),
 ]
